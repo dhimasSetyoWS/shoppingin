@@ -1,4 +1,7 @@
 <script setup>
+import { onMounted } from "vue";
+import { inject } from 'vue';
+const addItem = inject('addItem');
 </script>
 <template>
 	<section id="items" class="p-12">
@@ -11,7 +14,7 @@
 					<h2 class="card-title text-6xl">Best Seller !</h2>
 					<p class="text-4xl">Video Tape.</p>
 					<div class="card-actions justify-end">
-						<button class="btn btn-green">Buy</button>
+						<button @click="addItem" class="btn btn-green">Buy</button>
 					</div>
 				</div>
 			</div>
@@ -22,10 +25,12 @@
 					<img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
 				</figure>
 				<div class="card-body">
-					<h2 class="card-title">Card Title</h2>
+					<a href="" class="card-title underline">
+						<h2>Card Title</h2>
+					</a>
 					<p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
 					<div class="card-actions justify-end">
-						<button class="btn btn-green">Buy Now</button>
+						<button @click="addItem" class="btn btn-green">Buy Now</button>
 					</div>
 				</div>
 			</div>
@@ -34,4 +39,5 @@
 </template>
 
 
-<style scoped></style>
+<style scoped>
+</style>

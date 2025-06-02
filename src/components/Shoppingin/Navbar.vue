@@ -1,7 +1,12 @@
+<script setup>
+import {inject} from "vue";
+const totalItems = inject('totalBuy')
+
+</script>
 <template>
 	<nav class="navbar bg-base-200 fixed top-0 z-100">
 		<div class="flex-1">
-			<a class="btn btn-ghost text-xl text-green-400 shadow shadow-green-400">Shoppingin</a>
+			<a href="index.html" class="btn btn-ghost text-xl text-green-400 shadow shadow-green-400">Shoppingin</a>
 		</div>
 		<div class="flex gap-3">
 			<div class="dropdown dropdown-end">
@@ -12,14 +17,15 @@
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 								d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
 						</svg>
+						<span v-show="totalItems > 0" class="badge badge-sm indicator-item">{{ totalItems }}</span>
 					</div>
 				</div>
-				<div tabindex="0" class="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow">
+				<div v-show="totalItems > 0" tabindex="0" class="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow">
 					<div class="card-body">
-						<span class="text-lg font-bold">8 Items</span>
-						<span class="text-info">Subtotal: $999</span>
+						<span class="text-lg font-bold">{{ totalItems }} items</span>
+						<span class="text-info">Subtotal: -</span>
 						<div class="card-actions">
-							<button class="btn btn-primary btn-block">View cart</button>
+							<a href="cart.html" class="btn btn-primary btn-block">View cart</a>
 						</div>
 					</div>
 				</div>
@@ -44,9 +50,5 @@
 		</div>
 	</nav>
 </template>
-
-<script setup>
-
-</script>
 
 <style scoped></style>

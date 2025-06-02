@@ -22,4 +22,8 @@ import Navbar from './Navbar.vue';
 .brand-text {
 	color: green;
 }
+
+.hero {
+	animation : fadeInUp 1.5s;
+}
 </style>

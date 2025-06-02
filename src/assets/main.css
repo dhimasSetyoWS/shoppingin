@@ -8,3 +8,11 @@
 html {
 	scroll-behavior: smooth;
 }
+.indicator-item {
+	transition : all ease-in-out 0.3s;
+}
+
+.added {
+	@apply bg-green-600;
+	animation : bounce 0.5s;
+}
