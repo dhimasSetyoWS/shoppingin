@@ -1,8 +1,6 @@
 <script setup>
 import {ref , provide} from "vue";
-import WelcomeShoppingin from './components/Shoppingin/WelcomeShoppingin.vue';
-import ShopItem from './components/Shoppingin/ShopItem.vue';
-
+import Navbar from "./components/Shoppingin/Navbar.vue"
 // untuk label totalBuy di navbar
 const total = ref(0);
 provide('totalBuy' , total)
@@ -20,8 +18,8 @@ provide('addItem' , addItem)
 </script>
 
 <template>
-	<WelcomeShoppingin />
-	<ShopItem/>
+	<Navbar/>
+	<RouterView/>
 </template>
 
 <style scoped></style>

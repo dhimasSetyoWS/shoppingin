@@ -6,7 +6,7 @@ const totalItems = inject('totalBuy')
 <template>
 	<nav class="navbar bg-base-200 fixed top-0 z-100">
 		<div class="flex-1">
-			<a href="index.html" class="btn btn-ghost text-xl text-green-400 shadow shadow-green-400">Shoppingin</a>
+			<RouterLink to="/" class="btn btn-ghost text-xl text-green-400 shadow shadow-green-400">Shoppingin</RouterLink>
 		</div>
 		<div class="flex gap-3">
 			<div class="dropdown dropdown-end">
@@ -39,12 +39,10 @@ const totalItems = inject('totalBuy')
 				</div>
 				<ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
 					<li>
-						<a class="justify-between">
-							Profile
-						</a>
+						<RouterLink to="/profile">Profile</RouterLink>
 					</li>
 					<li><a>Settings</a></li>
-					<li><a>Logout</a></li>
+					<li><RouterLink to="/login">Logout</RouterLink></li>
 				</ul>
 			</div>
 		</div>

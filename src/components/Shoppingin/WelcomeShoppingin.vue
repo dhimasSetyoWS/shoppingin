@@ -1,9 +1,8 @@
 <script setup>
 import Navbar from './Navbar.vue';
+import ShopItem from './ShopItem.vue';
 </script>
 <template>
-	<!-- Navbar -->
-	<Navbar/>
 	<!-- Hero -->
 	<div class="hero min-h-screen">
 		<div class="hero-content text-center">
@@ -16,6 +15,7 @@ import Navbar from './Navbar.vue';
 			</div>
 		</div>
 	</div>
+	<ShopItem/>
 </template>
 
 <style scoped>
