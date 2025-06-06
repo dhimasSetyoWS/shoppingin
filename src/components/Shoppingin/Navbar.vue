@@ -1,12 +1,22 @@
 <script setup>
+import Cart from "./Cart.vue"
+import Login from "./Login.vue"
+import Profile from "./Profile.vue"
+import WelcomeShoppingin from "./WelcomeShoppingin.vue"
 import {inject} from "vue";
 const totalItems = inject('totalBuy')
 
+
+let appComp = inject('appComp')
+function changeComp(comp) {
+	appComp.value = comp
+	console.log(appComp)
+}
 </script>
 <template>
 	<nav class="navbar bg-base-200 fixed top-0 z-100">
 		<div class="flex-1">
-			<RouterLink to="/" class="btn btn-ghost text-xl text-green-400 shadow shadow-green-400">Shoppingin</RouterLink>
+			<a @click="changeComp(WelcomeShoppingin)" class="btn btn-ghost text-xl text-green-400 shadow shadow-green-400">Shoppingin</a>
 		</div>
 		<div class="flex gap-3">
 			<div class="dropdown dropdown-end">
@@ -25,7 +35,7 @@ const totalItems = inject('totalBuy')
 						<span class="text-lg font-bold">{{ totalItems }} items</span>
 						<span class="text-info">Subtotal: -</span>
 						<div class="card-actions">
-							<a href="cart.html" class="btn btn-primary btn-block">View cart</a>
+							<a @click="changeComp(Cart)" href="#" class="btn btn-primary btn-block">View cart</a>
 						</div>
 					</div>
 				</div>
@@ -39,10 +49,10 @@ const totalItems = inject('totalBuy')
 				</div>
 				<ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
 					<li>
-						<RouterLink to="/profile">Profile</RouterLink>
+						<a @click="changeComp(Profile)">Profile</a>
 					</li>
 					<li><a>Settings</a></li>
-					<li><RouterLink to="/login">Logout</RouterLink></li>
+					<li><a @click="changeComp(Login)">Logout</a></li>
 				</ul>
 			</div>
 		</div>
