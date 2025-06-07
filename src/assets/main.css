@@ -25,3 +25,7 @@ html {
 .main {
 	@apply p-32 bg-base-200 text-center h-screen;
 }
+
+.fadeIn {
+	animation : fadeIn 1s;
+}

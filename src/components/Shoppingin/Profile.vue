@@ -17,7 +17,7 @@
 					<small>Ubah profile picture anda?</small>
 					<div class="avatar indicator mt-2">
 						<a href="#" type="button"
-							class="indicator-item indicator-bottom badge bg-blue-500 border-none">[0]</a>
+							class="indicator-item indicator-bottom badge bg-green-500 border-none">[0]</a>
 						<div class="h-20 w-20 rounded-lg">
 							<img alt="Tailwind CSS examples"
 								src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" />

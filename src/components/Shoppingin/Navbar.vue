@@ -30,12 +30,12 @@ function changeComp(comp) {
 						<span v-show="totalItems > 0" class="badge badge-sm indicator-item">{{ totalItems }}</span>
 					</div>
 				</div>
-				<div v-show="totalItems > 0" tabindex="0" class="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow">
+				<div tabindex="0" class="card card-compact dropdown-content bg-base-100 z-1 mt-3 w-52 shadow">
 					<div class="card-body">
 						<span class="text-lg font-bold">{{ totalItems }} items</span>
 						<span class="text-info">Subtotal: -</span>
 						<div class="card-actions">
-							<a @click="changeComp(Cart)" href="#" class="btn btn-primary btn-block">View cart</a>
+							<a @click="changeComp(Cart)" class="btn btn-green btn-block">View cart</a>
 						</div>
 					</div>
 				</div>
